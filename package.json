@@ -21,7 +21,8 @@
     "koa": "^2.5.2",
     "node-sass": "^4.9.4",
     "nuxt": "^2.0.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "scss-loader": "^0.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
