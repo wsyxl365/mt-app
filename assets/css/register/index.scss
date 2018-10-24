@@ -1,0 +1,50 @@
+.page-register {
+  .header {
+    border-bottom: 2px solid #2bb8aa;
+    min-width: 980px;
+    color: #666;
+
+    header {
+      margin: 0 auto;
+      padding: 10px 0;
+      width: 980px;
+
+      .site-logo {
+        display: inline-block;
+        width: 128px;
+        width: 54px;
+        height: 36px;
+        text-indent: -9999px;
+        background-position: -669px -748px;
+        background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
+      }
+
+      .login {
+        float: right;
+      }
+
+      .bold {
+        font-style: normal;
+      }
+    }
+  }
+
+  >section {
+    margin: 0 auto 30px;
+    padding-top: 30px;
+    width: 980px;
+    min-height: 300px;
+    padding-right: 550px;
+    box-sizing: border-box;
+
+    .status {
+      font-size: 12px;
+      margin-left: 20px;
+      color: #e6a23c;
+    }
+
+    .error {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,285 @@
+.page-product{
+    .m-crumbs{
+        margin: 10px 0;
+    }
+    .s-item {
+      display: flex;
+      padding: 20px 0;
+      min-height: 125px;
+      border-top: 1px solid #E5E5E5;
+
+      dt {
+        width: 220px;
+        padding-right: 20px;
+
+        >img {
+          width: 220px;
+          height: 125px;
+          overflow: hidden;
+        }
+      }
+
+      dd {
+        flex: 1;
+
+        >h3 {
+          font-weight: 500;
+          font-size: 16px;
+          color: #333;
+        }
+
+        .el-rate {
+          display: inline-block;
+
+          .el-rate__icon {
+            font-size: 12px;
+          }
+        }
+
+        >span {
+          font-size: 12px;
+          margin-right: 10px;
+        }
+
+        .s-item-comment-total {
+          color: #f90;
+        }
+
+        .s-item-price {
+          color: #f60;
+        }
+
+        >p {
+          >span {
+            font-size: 12px;
+            padding-right: 10px;
+          }
+
+          >em {
+            font-style: normal;
+          }
+
+          >b {
+            float: right;
+            border: 1px solid #31BBAC;
+            background-color: rgb(255, 153, 0);
+            border-color: rgb(255, 153, 0);
+            color: rgb(255, 255, 255);
+            padding: 0 6px;
+            border-radius: 2px;
+            height: 18px;
+            line-height: 18px;
+            font-size: 12px;
+            cursor: default;
+          }
+        }
+
+        >ul {
+          list-style: none;
+          font-size: 12px;
+          padding-top: 11px;
+          margin-top: 5px;
+          border-top: 1px dashed #ddd;
+
+          li {
+            width: 668px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            .detail-type {
+              width: 27px;
+              height: 15px;
+              line-height: 15px;
+              display: inline-block;
+              background: rgb(35, 147, 238);
+              color: #fff;
+              text-align: center;
+              border-radius: 1px;
+              padding: 1px 2px;
+              margin-right: 10px;
+            }
+
+            &:nth-child(2) {
+              .detail-type {
+                background: rgb(162, 35, 204);
+              }
+            }
+
+            &:nth-child(3) {
+              .detail-type {
+                background: rgb(234, 109, 45);
+              }
+            }
+          }
+        }
+      }
+    }
+    .m-products-list {
+      box-sizing: border-box;
+      margin-top: 10px;
+      background: #FFF;
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      color: #333;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 11px 20px;
+
+      >dl {
+        dd {
+          width: 96px;
+          height: 20px;
+          display: inline-block;
+          box-sizing: border-box;
+          text-align: center;
+          cursor: pointer;
+
+          &.s-nav-active {
+            color: #31BCAD;
+          }
+        }
+
+        padding-bottom: 2px;
+
+        .s-price {
+          position: relative;
+
+          &:before,
+          &:after {
+            content: " ";
+            position: absolute;
+            right: 8px;
+            top: 0;
+            border: 4px solid transparent;
+            border-bottom-color: #ddd;
+            width: 0;
+            height: 0;
+          }
+
+          &:after {
+            top: 12px;
+            border-bottom-color: transparent;
+            border-top-color: #ddd;
+          }
+        }
+      }
+
+      >ul {
+        list-style: none;
+        padding: 11px 0;
+      }
+    }
+    .m-product-categroy {
+      padding: 15px 20px 0;
+      background: #FFF;
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    .classic {
+      display: flex;
+      padding-bottom: 10px;
+
+      >dt {
+        width: 80px;
+
+        &:nth-child(2) {
+          border-radius: 100px;
+          background: #13D1BE;
+          color: #FFF;
+          height: 22px;
+          line-height: 22px;
+          width: 40px;
+          box-sizing: border-box;
+          margin-right: 40px;
+          text-align: center;
+        }
+      }
+
+      &:nth-child(1) {
+        dd {
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+    .m-product-select {
+      padding-bottom: 5px;
+      min-width: 120px;
+
+      .tab {
+        position: relative;
+
+        dt {
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        dd {
+          &:before {
+            content: ' ';
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-color: transparent transparent #E5E5E5;
+            border-style: solid;
+            border-width: 5px;
+            top: -11px;
+          }
+
+          &:after {
+            content: ' ';
+            position: absolute;
+            top: -8px;
+            left: 16px;
+            display: block;
+            width: 0;
+            height: 0;
+            border-color: transparent transparent #fff;
+            border-style: solid;
+            border-width: 4px;
+          }
+
+          display: none;
+          top: 24px;
+          width: 510px;
+          background: #fff;
+          position: absolute;
+          cursor: auto;
+          user-select: text;
+          white-space: normal;
+          font-size: 12px;
+          text-align: left;
+          background: #FFF;
+          border: 1px solid #E5E5E5;
+          border-radius: 4px;
+          padding: 19px 15px 9px;
+
+          span {
+            display: inline-block;
+            min-width: 120px;
+            line-height: 1.5;
+            font-weight: 500;
+          }
+
+          h3 {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 11px;
+          }
+        }
+
+        &:hover {
+          dd {
+            display: block;
+            z-index: 999;
+          }
+        }
+      }
+    }
+}

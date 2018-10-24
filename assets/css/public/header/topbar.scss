@@ -1,0 +1,207 @@
+.m-header{
+  @at-root .el-header{
+    .m-header.m-header-topbar{
+      width: 1190px!important;
+      z-index: 9999;
+      height: 40px;
+      line-height: 40px;
+      z-index: 9;
+    }
+  }
+  .m-geo {
+    color: #666;
+    font-size: 12px;
+    .changeCity {
+      background: #F4F4F4;
+      border: 1px solid #E5E5E5;
+      border-radius: 2px;
+      color: #666;
+      margin: 0 4px;
+      padding: 0 2px;
+      &:hover {
+        color: #31BBAC;
+      }
+    }
+    .username {
+      color: #31BBAC;
+      cursor: pointer;
+    }
+    .login,
+    .register {
+      font-size: 12px;
+      line-height: 40px;
+      color: #999;
+      margin: 0 5px;
+      &.login {
+        color: #31BBAC;
+        margin: 0 5px 0 20px;
+      }
+      &:hover {
+        color: #31BBAC;
+      }
+    }
+  }
+  .m-nav{
+    float: right;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    .nav {
+      list-style: none;
+      float: right;
+      height: 40px;
+      >li {
+        float: left;
+        width: 78px;
+        box-sizing: border-box;
+        text-align: center;
+        cursor: pointer;
+
+        a {
+          color: #999;
+
+          &:hover {
+            color: #31BBAC;
+          }
+        }
+
+        &.list:hover {
+          border: 1px solid #E5E5E5;
+          border-top: none;
+
+          >dl {
+            display: block;
+          }
+
+          .subContainer {
+            display: flex;
+          }
+        }
+
+        dl {
+          background: #fff;
+          display: none;
+          z-index: 999;
+
+          dd {
+            line-height: 35px;
+
+            &:hover {
+              color: #31BBAC;
+            }
+          }
+        }
+
+        &.bd {
+          dl {
+            width: 140%;
+            position: relative;
+            border-top: 1px solid #e5e5e5;
+            left: -31px;
+            top: -1px;
+            border-bottom: 1px solid #e5e5e5;
+            border-left: 1px solid #E5E5E5;
+            position: relative;
+
+            &:before {
+              content: " ";
+              display: block;
+              background: #fff;
+              height: 4px;
+              width: 76px;
+              position: absolute;
+              top: -1px;
+              right: 0;
+            }
+          }
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+
+        &.site {
+          &:hover {
+            border-bottom: none;
+          }
+        }
+
+        .subContainer {
+          box-sizing: border-box;
+          background: #fff;
+          padding: 30px 36px 36px 47px;
+          width: 1250px;
+          position: relative;
+          left: -1175px;
+          z-index: 999;
+          border: 1px solid #e5e5e5;
+          display: none;
+          text-align: left;
+
+          &:before {
+            content: ' ';
+            display: block;
+            width: 76px;
+            height: 4px;
+            background: #fff;
+            position: absolute;
+            top: -1px;
+            right: 0;
+          }
+
+          >dl {
+            box-sizing: border-box;
+            text-align: left;
+            display: inline-block !important;
+            margin-right: 47px;
+
+            dt {
+              margin-bottom: 26px;
+              font-size: 14px;
+              color: #31BBAC;
+              text-align: center;
+            }
+
+            dd {
+              width: 78px;
+              display: inline-block;
+              text-align: center;
+            }
+
+            &.hotel {
+              width: 234px;
+            }
+
+            &.food {
+              width: 156px;
+            }
+
+            &.movie {
+              width: 90px;
+              dd{
+                width: 100%;
+              }
+            }
+
+            &.app {
+              width: 380px;
+              flex: 1;
+              text-align: center;
+              dd {
+                width: 60px;
+                height: 73px;
+                line-height: 73px;
+                text-align: center;
+                margin: 0 8px;
+                img {
+                  width: 60px;
+                  height: 60px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
