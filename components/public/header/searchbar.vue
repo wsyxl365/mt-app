@@ -40,11 +40,11 @@
           </dl>
         </div>
         <p class="suggset">
-          <a href="#">故宫博物院</a>
-          <a href="#">故宫博物院</a>
-          <a href="#">故宫博物院</a>
-          <a href="#">故宫博物院</a>
-          <a href="#">故宫博物院</a>
+          <a href="#">故宫博物院1</a>
+          <a href="#">故宫博物院2</a>
+          <a href="#">故宫博物院3</a>
+          <a href="#">故宫博物院4</a>
+          <a href="#">故宫博物院5</a>
         </p>
         <ul class="nav">
           <li>
