@@ -81,7 +81,11 @@
         <ul class="security">
           <li>
             <i class="refund"/><p class="txt">随时退</p>
+          </li>
+          <li>
             <i class="single"/><p class="txt">不满意免单</p>
+          </li>
+          <li>
             <i class="overdue"/><p class="txt">过期退</p>
           </li>
         </ul>

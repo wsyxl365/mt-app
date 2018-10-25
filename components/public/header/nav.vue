@@ -59,7 +59,6 @@
             <dd>
               <a href="#">
                 <img
-                  class="appicon"
                   src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
                   title="美团app"
                   alt="美团app">
@@ -68,7 +67,6 @@
             <dd>
               <a href="#">
                 <img
-                  class="appicon"
                   src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
                   title="美团app"
                   alt="美团app">
@@ -77,7 +75,6 @@
             <dd>
               <a href="#">
                 <img
-                  class="appicon"
                   src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
                   title="美团app"
                   alt="美团app">
@@ -86,7 +83,6 @@
             <dd>
               <a href="#">
                 <img
-                  class="appicon"
                   src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
                   title="美团app"
                   alt="美团app">
