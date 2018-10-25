@@ -24,8 +24,6 @@
   }
 </script>
 
-<style
-  type="text/scss"
-  lang="scss">
+<style lang="scss">
   @import "@/assets/css/public/header/index.scss";
 </style>
