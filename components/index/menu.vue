@@ -13,7 +13,10 @@
     </dl>
     <div
       v-if="kind"
-      class="detail">
+      class="detail"
+      @mouseenter="sover"
+      @mouseleave="sout"
+    >
       <template
         v-for="(item, index) in curdetail.child">
         <h4 :key="index">标题</h4>
@@ -72,13 +75,19 @@
     },
     methods: {
       mouseleave(){
-        this.time = setTimeout(()=>{
+        this._timer = setTimeout(()=>{
           this.kind='';
         }, 150);
       },
       enter(e){
         this.kind = e.target.querySelector('i').className;
         console.log(this.kind);
+      },
+      sover(){
+        clearTimeout(this._timer);
+      },
+      sout(){
+        this.kind=""
       }
     }
   }
