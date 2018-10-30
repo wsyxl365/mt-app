@@ -22,7 +22,7 @@ passport.serializeUser(function(user, done){
   done(null, user)
 })
 
-passport.deserialzeUser(function(user, done){
+passport.deserializeUser(function(user, done){
   return done(null, user)
 })
 
