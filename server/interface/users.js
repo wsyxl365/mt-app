@@ -113,6 +113,13 @@ router.post('/signin', async (ctx, next)=>{
     }
   })(ctx, next)
 })
+router.get("/fix", async (ctx)=>{
+  //Store.hset(`test`, "name", "111");
+  ctx.session.name = "nidie";
+  ctx.body = {
+    code:0
+  }
+})
 /**
  * -----邮箱发送接口-----
  */
