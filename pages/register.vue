@@ -77,6 +77,7 @@
   </div>
 </template>
 <script>
+  import CryptoJs from "crypto-js";
   export default {
   	data(){
   		return {
@@ -165,7 +166,33 @@
         }
       },
       register(){
-
+        this.$refs["ruleForm"].validate((valid)=>{
+          if(valid) {
+            this.$axios.post("/users/signup", {
+              username: window.encodeURIComponent(this.ruleForm.name),
+              password: CryptoJs.MD5(this.ruleForm.pwd).toString(),
+              email: this.ruleForm.email,
+              code: this.ruleForm.code
+            })
+              .then(({status, data})=>{
+                if(status === 200)
+                {
+                  if(data && data.code === 0) {
+                    location.href = "/login"
+                  } else {
+                    this.error = data.msg
+                  }
+                }
+                else
+                {
+                  this.error = `服务器出错，错误码:${status}`
+                }
+                setTimeout(()=>{
+                  this.error = "";
+                }, 1500)
+              })
+          }
+        })
       }
     }
   }
