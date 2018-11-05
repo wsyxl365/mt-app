@@ -25,7 +25,7 @@ export default {
     },
     get expire(){
       return ()=>{
-        return new Date().getTime() + 60*1000
+        return parseInt(new Date().getTime()) + (60*1000);
       }
     }
   }
