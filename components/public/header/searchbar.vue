@@ -26,9 +26,9 @@
           >
             <dt>热门搜索</dt>
             <dd
-              v-for="(item, index) in hotPlace"
+              v-for="(item, index) in $store.state.search.hotPlace.slice(0, 5)"
               :key="index">
-              {{ item }}</dd>
+              {{ item.name }}</dd>
           </dl>
           <dl
             v-if="isSearchList"
@@ -36,15 +36,15 @@
             <dd
               v-for="(item,index) in searchList"
               :key="index"
-            >{{ item }}</dd>
+            >{{ item.name }}</dd>
           </dl>
         </div>
-        <p class="suggset">
-          <a href="#">故宫博物院1</a>
-          <a href="#">故宫博物院2</a>
-          <a href="#">故宫博物院3</a>
-          <a href="#">故宫博物院4</a>
-          <a href="#">故宫博物院5</a>
+        <p class="suggest">
+          <a
+            v-for="(item, index) in $store.state.search.hotPlace.slice(0, 5)"
+            :key="index"
+            href="#"
+          >{{ item.name }}</a>
         </p>
         <ul class="nav">
           <li>
@@ -95,13 +95,14 @@
 </template>
 
 <script>
+    import _ from "lodash";
     export default {
       data(){
         return {
           search: '', //当前输入框的值
           isFocus: false, //是否聚焦
-          hotPlace: ["火锅","火锅","火锅","火锅","火锅"], // 热门搜索数据
-          searchList: ["故宫","故宫","故宫"] // 搜索数据
+          hotPlace: [], // 热门搜索数据
+          searchList: [] // 搜索数据
         }
       },
       computed:{
@@ -121,9 +122,18 @@
             this.isFocus = false
           }, 200)
         },
-        input(){
-          console.log("input");
-        }
+        input: _.debounce(async function(){
+            let self = this;
+            let city = self.$store.state.geo.position.city.replace('市', '');
+            self.searchList = [];
+            let {status, data: {top}} = await self.$axios.get('/search/top', {
+              params: {
+                input: self.search,
+                city
+              }
+            })
+            self.searchList = top.slice(0, 10);
+        }, 300)
       }
     }
 </script>
