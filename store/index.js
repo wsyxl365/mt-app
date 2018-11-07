@@ -24,7 +24,7 @@ const store = ()=>new Vuex.Store({
       }
 
       {
-        console.log(app)
+        //console.log(app)
         const {status, data: {result}} = await app.$axios.get('/search/hotPlace', {
           params: {
             city: app.store.state.geo.position.city.replace('市', '')
