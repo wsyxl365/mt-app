@@ -1,3 +1,4 @@
+# 特别说明: 此项目为慕课网实战项目，目前此项目只是初始化了一些工作，暂时还没时间正是开发，具体实战课程传送门:https://coding.imooc.com/learn/list/280.html 请支持正版 谢谢
 # 本项目主要以Vue SSR+Koa2全栈技术为目标，最终实现美团网项目,涉及Vue2.5、Nuxt、Koa2、element-ui、Mongodb等
 # mt-app
 
